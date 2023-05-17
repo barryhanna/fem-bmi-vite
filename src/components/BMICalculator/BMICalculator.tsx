@@ -10,7 +10,6 @@ const BMICalculator = () => {
             <input name="measurement" type="radio" id="imperial" value="imperial"/>
         </fieldset>
         <fieldset>
-        <fieldset>
             <p>Height</p>
             <input type="number" name="" id="height" inputMode="numeric"/>
         </fieldset>
@@ -18,7 +17,7 @@ const BMICalculator = () => {
             <p>Weight</p>
             <input type="number" name="" id="height" inputMode="numeric"/>
         </fieldset>
-        </fieldset>
+        
         <div className="results__panel">
             <p>Your BMI is...</p>
             <p className="results__result">23.4</p>
