@@ -1,5 +1,4 @@
 import './App.css'
-import BMICalculator from './components/BMICalculator/BMICalculator';
 import BMILimitationCard from './components/BMILimitationCard/BMILimitationCard';
 import Header from './components/Header';
 import ImproveBMICard from './components/ImproveBMICard/ImproveBMICard';
