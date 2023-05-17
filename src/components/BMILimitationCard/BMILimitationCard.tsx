@@ -1,6 +1,9 @@
 const BMILimitationCard = () => {
     return <div>
-        BMI Limitation Card
+        <div>ICON</div>
+        <h3>Healthy eating</h3>
+        <p>Healthy eating promotes weight control, disease prevention, better digestion,
+immunity, mental clarity, and mood.</p>
     </div>
 }
 

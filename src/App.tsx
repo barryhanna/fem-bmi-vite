@@ -1,11 +1,30 @@
 import './App.css'
+import BMICalculator from './components/BMICalculator/BMICalculator';
+import BMILimitationCard from './components/BMILimitationCard/BMILimitationCard';
 import Header from './components/Header';
+import ImproveBMICard from './components/ImproveBMICard/ImproveBMICard';
 
 function App() {
   
 
   return (
-    <Header />
+    <>
+      <Header />
+      <div className="improve-bmi__card-list">
+        <ImproveBMICard />
+        <ImproveBMICard />
+        <ImproveBMICard />
+        <ImproveBMICard />
+        <ImproveBMICard />
+      </div>
+      <section className="limitations-of-bmi">
+        <BMILimitationCard />
+        <BMILimitationCard />
+        <BMILimitationCard />
+        <BMILimitationCard />
+        <BMILimitationCard />
+      </section>
+    </>
   )
 }
 
