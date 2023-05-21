@@ -26,7 +26,28 @@ overall restoration and rejuvenation.</p>
         
       </div>
       <section className="limitations-of-bmi">
-        <BMILimitationCard />
+        <BMILimitationCard icon="gender" title="Gender">
+          <p>The development and body fat composition of girls and boys vary with age. Consequently,
+a child's age and gender are considered when evaluating their BMI.</p>
+        </BMILimitationCard>
+        <BMILimitationCard icon="age" title="Age">
+          <p>In aging individuals, increased body fat and muscle loss may cause BMI to underestimate
+body fat content.</p>
+        </BMILimitationCard>
+        <BMILimitationCard icon="muscle" title="Muscle">
+          <p>BMI may misclassify muscular individuals as overweight or obese, as it doesn't
+differentiate muscle from fat.</p>
+        </BMILimitationCard>
+        <BMILimitationCard icon="pregnancy" title="Pregnancy">
+          <p>Expectant mothers experience weight gain due to their growing baby. Maintaining a
+healthy pre-pregnancy BMI is advisable to minimise health risks for both mother
+and child.</p>
+        </BMILimitationCard>
+        <BMILimitationCard icon="race" title="Race">
+          <p>Certain health concerns may affect individuals of some Black and Asian origins at
+lower BMIs than others. To learn more, it is advised to discuss this with your
+GP or practice nurse.</p>
+        </BMILimitationCard>
         
       </section>
     </>

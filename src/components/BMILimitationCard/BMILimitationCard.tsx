@@ -1,9 +1,18 @@
-const BMILimitationCard = () => {
+import Icon from '../Icon';
+import styled from 'styled-components';
+
+const Header = styled.header`
+    display: flex;
+    gap: 1rem;
+`;
+
+const BMILimitationCard = ({icon, title, children}) => {
     return <div>
-        <div>BMI Limitation</div>
-        <h3>Lorem, ipsum.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, aliquid?</p>
+    <Header><Icon type={icon} /> <h2>{title}</h2></Header>
+    <div className="card__body">
+        {children}
     </div>
+</div>
 }
 
 export default BMILimitationCard;
