@@ -1,0 +1,11 @@
+.bmi-calculator {
+    --border-radius: 16px;
+    
+    border-radius: var(--border-radius);
+    
+    & fieldset {
+        border: none;
+        padding-inline: 0;
+    }
+
+}

@@ -4,7 +4,7 @@ const BMICalculator = () => {
     // TODO: Add state and control inputs
     const [metric, setMetric] = React.useState(true);
     // Conditionally render inputs for selected measurement system
-    return <form>
+    return <form className="bmi-calculator">
         <h2>Enter your details below</h2>
         <fieldset>
             <label htmlFor="metric">Metric</label>
