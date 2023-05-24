@@ -1,16 +1,17 @@
 import React from 'react';
+import styles from './BMICalculator.module.css';
 
 const BMICalculator = () => {
     // TODO: Add state and control inputs
     const [metric, setMetric] = React.useState(true);
     // Conditionally render inputs for selected measurement system
-    return <form className="bmi-calculator">
+    return <form className={styles.bmiCalculator}>
         <h2>Enter your details below</h2>
-        <fieldset>
+        <fieldset className={styles.measurementSelectionContainer}>
+            <input name="unit" type="radio" id="metric" value="metric" checked />
             <label htmlFor="metric">Metric</label>
-            <input name="measurement" type="radio" id="metric" value="metric" checked />
+            <input name="unit" type="radio" id="imperial" value="imperial"/>
             <label htmlFor="imperial">Imperial</label>
-            <input name="measurement" type="radio" id="imperial" value="imperial"/>
         </fieldset>
        {metric && (
         <>
