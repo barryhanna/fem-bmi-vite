@@ -1,49 +1,86 @@
-.bmiCalculator input[type="radio"] {
-    display: none;
+.bmiCalculator {
+	background-color: white;
+	padding: var(--spacer);
+	border-radius: 1rem;
+}
+
+.bmiCalculator > * + * {
+	margin-top: var(--spacer);
+}
+
+.bmiCalculator fieldset {
+	border: none;
+	padding-inline: 0;
+}
+
+.bmiCalculator input[type='radio'] {
+	display: none;
 }
 
 .bmiCalculator label {
-    position: relative;
-    line-height: 31px;
-    padding-left: 2.5rem;
+	position: relative;
+	line-height: 31px;
+	padding-left: 2.5rem;
 }
 
 .bmiCalculator input:not(:checked) + label::before {
-    position: absolute;
-    content: '';
-    color: transparent;
-    height: 31px;
-    width: 31px;
-    left: 0;
-    border-radius: 50%;
-    border: 1px solid var(--clr-borders);
+	position: absolute;
+	content: '';
+	color: transparent;
+	height: 31px;
+	width: 31px;
+	left: 0;
+	border-radius: 50%;
+	border: 1px solid var(--clr-borders);
 }
 
- .bmiCalculator input:checked + label::before { 
-    position: absolute;
-    content: '';
-    background-color: var(--clr-blue);
-    height: 15px;
-    width: 15px;
-    left: 8px;
-    top: 8px;
-    border-radius: 50%;
-    border: 1px solid var(--clr-borders);
+.bmiCalculator input:checked + label::before {
+	position: absolute;
+	content: '';
+	background-color: var(--clr-blue);
+	height: 15px;
+	width: 15px;
+	left: 8px;
+	top: 8px;
+	border-radius: 50%;
+	border: 1px solid var(--clr-borders);
 }
 
- .bmiCalculator input:checked + label::after { 
-    position: absolute;
-    content: '';
-    background-color: var(--clr-blue);
-    height: 31px;
-    width: 31px;
-    left: 0;
-    border-radius: 50%;
-    border: 1px solid var(--clr-borders);
-    opacity: .15;
-} 
+.bmiCalculator input:checked + label::after {
+	position: absolute;
+	content: '';
+	background-color: var(--clr-blue);
+	height: 31px;
+	width: 31px;
+	left: 0;
+	border-radius: 50%;
+	border: 1px solid var(--clr-borders);
+	opacity: 0.15;
+}
 
 .measurementSelectionContainer {
-    display: flex;
-    gap: 2rem;
+	display: flex;
+	gap: 2rem;
+}
+
+.bmiCalculator input[type='number'] {
+	height: 4.375rem;
+	width: 100%;
+}
+
+.bmiCalculator fieldset div {
+	color: var(--clr-body);
+}
+
+.resultsPanel {
+	color: #fff;
+	background: var(--gradient-2);
+	border-radius: var(--border-radius);
+	padding: calc(var(--spacer) * 1.5);
+}
+
+.resultsPanel p:first-of-type {
+	font-weight: bold;
+	font-size: 1rem;
+	line-height: 1.5;
 }

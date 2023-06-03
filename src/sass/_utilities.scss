@@ -5,3 +5,7 @@
 .centre {
     margin-inline: auto;
 }
+
+.flow > *+* {
+    margin-top: var(--spacer);
+}

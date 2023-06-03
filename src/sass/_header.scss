@@ -1,0 +1,14 @@
+.logo {
+    display: block;
+    margin-inline: auto;
+  }
+
+  .intro-text {
+    font-size: var(--txt-body-md-size);
+    text-align: center;
+  }
+
+  .header {
+    background: var(--gradient-1);
+    padding: var(--spacer);
+  }
