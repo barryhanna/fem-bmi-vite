@@ -2,6 +2,8 @@
 	background-color: white;
 	padding: var(--spacer);
 	border-radius: 1rem;
+	box-shadow: var(--box-shadow-1);
+	isolation: isolate;
 }
 
 .bmiCalculator > * + * {

@@ -6,6 +6,6 @@
     margin-inline: auto;
 }
 
-.flow > *+* {
+.flow > *+*:not(:empty) {
     margin-top: var(--spacer);
 }
