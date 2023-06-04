@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './BMICalculator.module.css';
 
 const BMICalculator = () => {
-    // TODO: Add state and control inputs
+    // TODO: Add function to convert from metric → imperial
     const [metric, setMetric] = React.useState(true);
     const [height, setHeight] = React.useState(160);
     const [weight, setWeight] = React.useState(80);
@@ -16,13 +16,22 @@ const BMICalculator = () => {
         }
     }
 
+    const handleChangeUnit = (e) => {
+        const { value: unit } = e.target;
+        if (unit === "metric") {
+            setMetric(true);
+        } else {
+            setMetric(false);
+        }
+    }
+
     // Conditionally render inputs for selected measurement system
     return <form className={styles.bmiCalculator}>
         <h2>Enter your details below</h2>
         <fieldset className={styles.measurementSelectionContainer}>
-            <input name="unit" type="radio" id="metric" value="metric" checked />
+            <input name="unit" type="radio" id="metric" value="metric" onClick={handleChangeUnit} checked={metric} />
             <label htmlFor="metric">Metric</label>
-            <input name="unit" type="radio" id="imperial" value="imperial" />
+            <input name="unit" type="radio" id="imperial" value="imperial" onClick={handleChangeUnit} checked={!metric} />
             <label htmlFor="imperial">Imperial</label>
         </fieldset>
         {metric && (
@@ -33,7 +42,7 @@ const BMICalculator = () => {
                 </fieldset>
                 <fieldset data-unit="kg">
                     <div>Weight</div>
-                    <input type="number" name="weight-kg" id="height" inputMode="numeric" data-unit="kg" value={weight} onChange={handleUpdate} />
+                    <input type="number" name="weight-kg" id="weight" inputMode="numeric" data-unit="kg" value={weight} onChange={handleUpdate} />
                 </fieldset></>
 
         )
@@ -42,13 +51,13 @@ const BMICalculator = () => {
             <>
                 <fieldset>
                     <div>Height</div>
-                    <input type="number" name="height-ft" id="height" inputMode="numeric" onChange={handleUpdate} />
-                    <input type="number" name="height-in" id="height" inputMode="numeric" onChange={handleUpdate} />
+                    <input type="number" name="height-ft" id="height-ft" inputMode="numeric" onChange={handleUpdate} />
+                    <input type="number" name="height-in" id="height-in" inputMode="numeric" onChange={handleUpdate} />
                 </fieldset>
                 <fieldset>
                     <div>Weight</div>
-                    <input type="number" name="weight-st" id="height" inputMode="numeric" />
-                    <input type="number" name="weight-lbs" id="height" inputMode="numeric" />
+                    <input type="number" name="weight-st" id="weight-st" inputMode="numeric" />
+                    <input type="number" name="weight-lbs" id="weight-lbs" inputMode="numeric" />
                 </fieldset>
             </>
         )
@@ -56,8 +65,8 @@ const BMICalculator = () => {
 
         <div className={styles.resultsPanel}>
             <p>Your BMI is...</p>
-            <p className="results__result">23.4</p>
-            <p>Your BMI suggests you're <span>a healthy weight.</span> our ideal weight is between <span>63.3kgs - 85.2kgs</span></p>
+            <p className={styles.result}>23.4</p>
+            <p>Your BMI suggests you're <span>a healthy weight.</span> our ideal weight is between <span className={styles.bmiRange}>63.3kgs - 85.2kgs</span></p>
         </div>
     </form>
 }
