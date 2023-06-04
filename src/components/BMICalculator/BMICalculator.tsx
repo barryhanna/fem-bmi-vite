@@ -4,6 +4,18 @@ import styles from './BMICalculator.module.css';
 const BMICalculator = () => {
     // TODO: Add state and control inputs
     const [metric, setMetric] = React.useState(true);
+    const [height, setHeight] = React.useState(160);
+    const [weight, setWeight] = React.useState(80);
+
+    const handleUpdate = (e) => {
+        const { name, value } = e.target;
+        if (name === "height-cm") {
+            setHeight(value)
+        } else if (name === "weight-kg") {
+            setWeight(value);
+        }
+    }
+
     // Conditionally render inputs for selected measurement system
     return <form className={styles.bmiCalculator}>
         <h2>Enter your details below</h2>
@@ -15,13 +27,13 @@ const BMICalculator = () => {
         </fieldset>
         {metric && (
             <>
-                <fieldset>
+                <fieldset data-unit="cm">
                     <div>Height</div>
-                    <input type="number" name="height-cm" id="height" inputMode="numeric" />
+                    <input type="number" name="height-cm" id="height" inputMode="numeric" data-unit="cm" value={height} onChange={handleUpdate} />
                 </fieldset>
-                <fieldset>
+                <fieldset data-unit="kg">
                     <div>Weight</div>
-                    <input type="number" name="weight-kg" id="height" inputMode="numeric" />
+                    <input type="number" name="weight-kg" id="height" inputMode="numeric" data-unit="kg" value={weight} onChange={handleUpdate} />
                 </fieldset></>
 
         )
@@ -29,12 +41,12 @@ const BMICalculator = () => {
         {!metric && (
             <>
                 <fieldset>
-                    <p>Height</p>
-                    <input type="number" name="height-ft" id="height" inputMode="numeric" />
-                    <input type="number" name="height-in" id="height" inputMode="numeric" />
+                    <div>Height</div>
+                    <input type="number" name="height-ft" id="height" inputMode="numeric" onChange={handleUpdate} />
+                    <input type="number" name="height-in" id="height" inputMode="numeric" onChange={handleUpdate} />
                 </fieldset>
                 <fieldset>
-                    <p>Weight</p>
+                    <div>Weight</div>
                     <input type="number" name="weight-st" id="height" inputMode="numeric" />
                     <input type="number" name="weight-lbs" id="height" inputMode="numeric" />
                 </fieldset>
