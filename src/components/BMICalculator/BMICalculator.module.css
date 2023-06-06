@@ -95,7 +95,7 @@
 	position: absolute;
 	content: attr(data-unit);
 	right: 24px;
-	top: 27%;
+	top: 25%;
 	font-size: var(--txt-heading-md-size);
 	font-weight: var(--txt-heading-wght);
 	color: var(--clr-blue);
