@@ -101,6 +101,18 @@
 	color: var(--clr-blue);
 }
 
+.bmiCalculator
+	.bmi-calculator--input-group-container
+	fieldset:has(input[type='number'])::after {
+	position: absolute;
+	content: attr(data-unit);
+	right: 24px;
+	top: 30%;
+	font-size: var(--txt-heading-md-size);
+	font-weight: var(--txt-heading-wght);
+	color: var(--clr-blue);
+}
+
 .bmiCalculator fieldset div {
 	color: var(--clr-body);
 }

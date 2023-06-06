@@ -1,11 +1,16 @@
 .bmi-calculator {
     --border-radius: 16px;
-    
+
     border-radius: var(--border-radius);
-    
+
     & fieldset {
         border: none;
         padding-inline: 0;
     }
 
+}
+
+.bmi-calculator--input-group-container {
+    display: flex;
+    gap: 1rem;
 }

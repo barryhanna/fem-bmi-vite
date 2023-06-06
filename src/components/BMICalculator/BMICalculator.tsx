@@ -44,20 +44,23 @@ const BMICalculator = () => {
                     <div>Weight</div>
                     <input type="number" name="weight-kg" id="weight" inputMode="numeric" data-unit="kg" value={weight} onChange={handleUpdate} />
                 </fieldset></>
-
         )
         }
         {!metric && (
             <>
                 <fieldset>
                     <div>Height</div>
-                    <input type="number" name="height-ft" id="height-ft" inputMode="numeric" onChange={handleUpdate} />
-                    <input type="number" name="height-in" id="height-in" inputMode="numeric" onChange={handleUpdate} />
+                    <div className='bmi-calculator--input-group-container'>
+                        <fieldset data-unit="ft"><input type="number" name="height-ft" id="height-ft" inputMode="numeric" onChange={handleUpdate} data-unit="ft" /></fieldset>
+                        <fieldset data-unit="in"><input type="number" name="height-in" id="height-in" inputMode="numeric" onChange={handleUpdate} data-unit="in" /></fieldset>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <div>Weight</div>
-                    <input type="number" name="weight-st" id="weight-st" inputMode="numeric" />
-                    <input type="number" name="weight-lbs" id="weight-lbs" inputMode="numeric" />
+                    <div className='bmi-calculator--input-group-container'>
+                        <fieldset data-unit="st"><input type="number" name="weight-st" id="weight-st" inputMode="numeric" data-unit="st" /></fieldset>
+                        <fieldset data-unit="lbs"><input type="number" name="weight-lbs" id="weight-lbs" inputMode="numeric" data-unit="lbs" /></fieldset>
+                    </div>
                 </fieldset>
             </>
         )
