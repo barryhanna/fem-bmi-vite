@@ -41,15 +41,19 @@ const BMICalculator = () => {
                 break;
             case "height-ft":
                 // calculate metric
+                console.log(`Changed ${name}`);
                 break;
             case "height-in":
                 // calculate metric
+                console.log(`Changed ${name}`);
                 break;
             case "weight-st":
                 // calculate metric
+                console.log(`Changed ${name}`);
                 break;
             case "weight-lbs":
                 // calculate metric
+                console.log(`Changed ${name}`);
                 break;
             default:
 
@@ -98,8 +102,8 @@ const BMICalculator = () => {
                 <div>Weight</div>
                 <fieldset>
                     <div className='bmi-calculator--input-group-container'>
-                        <fieldset data-unit="st"><input type="number" name="weight-st" id="weight-st" inputMode="numeric" data-unit="st" value={weightMetricToImperial(weight).stone} /></fieldset>
-                        <fieldset data-unit="lbs"><input type="number" name="weight-lbs" id="weight-lbs" inputMode="numeric" data-unit="lbs" value={weightMetricToImperial(weight).lbs} /></fieldset>
+                        <fieldset data-unit="st"><input type="number" name="weight-st" id="weight-st" inputMode="numeric" data-unit="st" onChange={handleUpdate} value={weightMetricToImperial(weight).stone} /></fieldset>
+                        <fieldset data-unit="lbs"><input type="number" name="weight-lbs" id="weight-lbs" inputMode="numeric" data-unit="lbs" onChange={handleUpdate} value={weightMetricToImperial(weight).lbs} /></fieldset>
                     </div>
                 </fieldset>
             </>
