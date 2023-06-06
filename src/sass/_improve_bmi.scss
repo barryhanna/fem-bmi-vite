@@ -1,0 +1,33 @@
+.improve-bmi {
+    background-color: var(--clr-header-bg);
+    padding-bottom: 3.5rem;
+}
+
+.improve-bmi > *:not(img) {
+    padding-inline: 1.5rem;
+}
+
+.bmi-interpretation {
+    margin-top: 3rem;
+}
+
+.bmi-interpretation___description {
+    margin-top: 2rem;
+}
+
+.improve-bmi__card-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4.5rem;
+    gap: 2.5rem;
+}
+
+.improve-bmi__card {
+    & h2 {
+        margin-top: 2rem;
+    }
+
+    & p {
+        margin-top: 0.66666667rem;
+    }
+}

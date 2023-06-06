@@ -1,0 +1,35 @@
+.limitations-of-bmi {
+    background: var(--gradient-1);
+    text-align: center;
+    padding-bottom: 6rem;
+}
+
+.limitations-of-bmi > * {
+    padding-inline: 1.5rem;
+}
+
+.limitations-of-bmi__header {
+    padding-top: 4.5rem;
+}
+
+.limitations-of-bmi__description {
+    margin-top: 2rem;
+}
+
+.limitations-of-bmi__card-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.5rem;
+    gap: 1rem;
+}
+
+.limitations-of-bmi__card {
+    background-color: var(--clr-white);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.limitations-of-bmi__card-body {
+    margin-top: 1rem;
+}
