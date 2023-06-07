@@ -6,8 +6,30 @@ const BMICalculator = () => {
     const [metric, setMetric] = React.useState(true);
     const [height, setHeight] = React.useState(160);
     const [weight, setWeight] = React.useState(80);
+    const IDEAL_WEIGHT_LOWER_BOUNDARY = 63.3
 
-    const calculateBMI = () => { }
+    const getBMI = () => {
+        const heightInMetres = height / 100;
+        return Math.round(weight / (heightInMetres * heightInMetres));
+    }
+
+    const getBMIInterpretation = () => {
+        const bmi = getBMI();
+
+        if (bmi < 18.5) { return `underweight`; }
+        else if (bmi >= 18.5 && bmi <= 24.9) { return `a healthy weight`; }
+        else if (bmi > 24.9 && bmi <= 29.9) { return `overweight` }
+        else if (bmi > 29.9) { return `obese` }
+        else { return `no data available` }
+    }
+
+    const getIdealWeightRange = (height) => {
+        // if(height)
+        // TODO:
+        // return obj with upper and lower boundary for given
+        // height
+    }
+
 
     const weightMetricToImperial = (kg: number) => {
         // 1kg = 2.204623 lbs
@@ -112,8 +134,8 @@ const BMICalculator = () => {
 
         <div className={styles.resultsPanel}>
             <p>Your BMI is...</p>
-            <p className={styles.result}>23.4</p>
-            <p>Your BMI suggests you're <span>a healthy weight.</span> our ideal weight is between <span className={styles.bmiRange}>63.3kgs - 85.2kgs</span></p>
+            <p className={styles.result}>{getBMI()}</p>
+            <p>Your BMI suggests you're <span>{getBMIInterpretation()}.</span> Your ideal weight is between <span className={styles.bmiRange}>63.3kgs - 85.2kgs</span></p>
         </div>
     </form>
 }
