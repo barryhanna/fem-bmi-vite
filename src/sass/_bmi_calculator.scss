@@ -14,3 +14,19 @@
     display: flex;
     gap: 1rem;
 }
+
+.bmi-inputs__heading {
+    margin-bottom: calc(1rem / 2);
+}
+
+.bmi-inputs fieldset {
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .bmi-inputs {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: space-between;
+    }
+}

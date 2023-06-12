@@ -101,43 +101,57 @@ const BMICalculator = () => {
             <label htmlFor="imperial">Imperial</label>
         </fieldset>
         {metric && (
-            <>
-                <div>Height</div>
-                <fieldset data-unit="cm">
-                    <input type="number" name="height-cm" id="height" inputMode="numeric" data-unit="cm" value={height} onChange={handleUpdate} />
-                </fieldset>
-                <div>Weight</div>
-                <fieldset data-unit="kg">
-                    <input type="number" name="weight-kg" id="weight" inputMode="numeric" data-unit="kg" value={weight} onChange={handleUpdate} />
-                </fieldset></>
+            <div className='bmi-inputs'>
+                <div>
+                    <div className='bmi-inputs__heading'>Height</div>
+                    <fieldset data-unit="cm">
+                        <input type="number" name="height-cm" id="height" inputMode="numeric" data-unit="cm" value={height} onChange={handleUpdate} />
+                    </fieldset>
+                </div>
+                <div>
+                    <div className='bmi-inputs__heading'>Weight</div>
+                    <fieldset data-unit="kg">
+                        <input type="number" name="weight-kg" id="weight" inputMode="numeric" data-unit="kg" value={weight} onChange={handleUpdate} />
+                    </fieldset>
+                </div>
+            </div>
         )
         }
-        {!metric && (
-            <>
-                <div>Height</div>
-                <fieldset>
-                    <div className='bmi-calculator--input-group-container'>
-                        <fieldset data-unit="ft"><input type="number" name="height-ft" id="height-ft" inputMode="numeric" onChange={handleUpdate} data-unit="ft" value={heightMetricToImperial(height).feet} /></fieldset>
-                        <fieldset data-unit="in"><input type="number" name="height-in" id="height-in" inputMode="numeric" onChange={handleUpdate} data-unit="in" value={heightMetricToImperial(height).inches} /></fieldset>
+        {
+            !metric && (
+                <div className='bmi-inputs'>
+                    <div>
+                        <div className='bmi-inputs__heading'>Height</div>
+                        <fieldset>
+                            <div className='bmi-calculator--input-group-container'>
+                                <fieldset data-unit="ft"><input type="number" name="height-ft" id="height-ft" inputMode="numeric" onChange={handleUpdate} data-unit="ft" value={heightMetricToImperial(height).feet} /></fieldset>
+                                <fieldset data-unit="in"><input type="number" name="height-in" id="height-in" inputMode="numeric" onChange={handleUpdate} data-unit="in" value={heightMetricToImperial(height).inches} /></fieldset>
+                            </div>
+                        </fieldset>
                     </div>
-                </fieldset>
-                <div>Weight</div>
-                <fieldset>
-                    <div className='bmi-calculator--input-group-container'>
-                        <fieldset data-unit="st"><input type="number" name="weight-st" id="weight-st" inputMode="numeric" data-unit="st" onChange={handleUpdate} value={weightMetricToImperial(weight).stone} /></fieldset>
-                        <fieldset data-unit="lbs"><input type="number" name="weight-lbs" id="weight-lbs" inputMode="numeric" data-unit="lbs" onChange={handleUpdate} value={weightMetricToImperial(weight).lbs} /></fieldset>
+                    <div>
+                        <div className='bmi-inputs__heading'>Weight</div>
+                        <fieldset>
+                            <div className='bmi-calculator--input-group-container'>
+                                <fieldset data-unit="st"><input type="number" name="weight-st" id="weight-st" inputMode="numeric" data-unit="st" onChange={handleUpdate} value={weightMetricToImperial(weight).stone} /></fieldset>
+                                <fieldset data-unit="lbs"><input type="number" name="weight-lbs" id="weight-lbs" inputMode="numeric" data-unit="lbs" onChange={handleUpdate} value={weightMetricToImperial(weight).lbs} /></fieldset>
+                            </div>
+                        </fieldset>
                     </div>
-                </fieldset>
-            </>
-        )
+                </div>
+            )
         }
 
         <div className={styles.resultsPanel}>
-            <p>Your BMI is...</p>
-            <p className={styles.result}>{getBMI()}</p>
-            <p>Your BMI suggests you're <span>{getBMIInterpretation()}.</span> Your ideal weight is between <span className={styles.bmiRange}>63.3kgs - 85.2kgs</span></p>
+            <div>
+                <p>Your BMI is...</p>
+                <p className={styles.result}>{getBMI()}</p>
+            </div>
+            <div>
+                <p>Your BMI suggests you're <span>{getBMIInterpretation()}.</span> Your ideal weight is between <span className={styles.bmiRange}>63.3kgs - 85.2kgs</span></p>
+            </div>
         </div>
-    </form>
+    </form >
 }
 
 export default BMICalculator;

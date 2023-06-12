@@ -123,6 +123,12 @@
 	font-weight: var(--txt-heading-wght);
 }
 
+@media screen and (min-width: 768px) {
+	.resultsPanel {
+		display: flex;
+	}
+}
+
 .bmiRange {
 	font-weight: bold;
 }
