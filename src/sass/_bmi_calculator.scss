@@ -19,8 +19,8 @@
     margin-bottom: calc(1rem / 2);
 }
 
-.bmi-inputs fieldset {
-    margin-bottom: 1rem;
+.bmi-inputs > :last-child {
+    margin-top: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -28,5 +28,9 @@
         display: flex;
         gap: 1.5rem;
         justify-content: space-between;
+    }
+
+    .bmi-inputs > :last-child {
+        margin-top: 0;
     }
 }

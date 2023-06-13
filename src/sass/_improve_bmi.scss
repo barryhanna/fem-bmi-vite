@@ -55,4 +55,21 @@
         transform: translateX(calc(var(--offset) + 1rem));
         padding-right: 1rem;
     }
+
+    .improve-bmi .improve-bmi__card-list {
+        padding-inline: 40px;
+    }
+
+    .improve-bmi__card {
+        display: flex;
+        align-items: center;
+    }
+
+    .improve-bmi__content {
+        margin-left: 1.1rem;
+    }
+
+    .improve-bmi__content h2 {
+        margin-top: 0;
+    }
 }

@@ -4,6 +4,8 @@
 	border-radius: 1rem;
 	box-shadow: var(--box-shadow-1);
 	isolation: isolate;
+	max-width: 744px;
+	margin-inline: auto;
 }
 
 .bmiCalculator > * + * {
@@ -123,6 +125,10 @@
 	font-weight: var(--txt-heading-wght);
 }
 
+.bmiRange {
+	font-weight: bold;
+}
+
 @media screen and (min-width: 768px) {
 	.measurementSelectionContainer > * {
 		flex: 1 1 50%;
@@ -137,11 +143,11 @@
 		border-bottom-right-radius: 999px;
 	}
 
+	.resultsPanel div:last-child {
+		padding-left: 0.5rem;
+	}
+
 	.resultsPanel > * {
 		flex: 1 1 50%;
 	}
-}
-
-.bmiRange {
-	font-weight: bold;
 }

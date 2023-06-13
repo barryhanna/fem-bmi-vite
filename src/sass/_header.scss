@@ -48,3 +48,13 @@
     position: relative;
     z-index: 1;
   }
+
+  @media (min-width: 768px) {
+    .header-bg-gradient {
+      height: 75%;
+    }
+
+    .header-heading {
+      width: 51%;
+    }
+  }

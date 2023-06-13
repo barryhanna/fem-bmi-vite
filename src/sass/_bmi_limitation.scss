@@ -33,3 +33,19 @@
 .limitations-of-bmi__card-body {
     margin-top: 1rem;
 }
+
+@media (min-width: 768px) {
+    .limitations-of-bmi__card {
+        flex: 1 1 40%;
+    }
+
+    .limitations-of-bmi__card:last-of-type {
+        flex: 0 0 365px;
+        margin-inline: auto;
+    }
+
+    .limitations-of-bmi__card-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
