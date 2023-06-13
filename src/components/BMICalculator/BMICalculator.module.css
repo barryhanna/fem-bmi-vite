@@ -124,8 +124,21 @@
 }
 
 @media screen and (min-width: 768px) {
+	.measurementSelectionContainer > * {
+		flex: 1 1 50%;
+	}
+
 	.resultsPanel {
 		display: flex;
+		gap: 1.5rem;
+		border-top-left-radius: 1rem;
+		border-bottom-left-radius: 1rem;
+		border-top-right-radius: 999px;
+		border-bottom-right-radius: 999px;
+	}
+
+	.resultsPanel > * {
+		flex: 1 1 50%;
 	}
 }
 

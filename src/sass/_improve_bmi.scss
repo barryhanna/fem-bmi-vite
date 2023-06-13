@@ -7,6 +7,11 @@
     padding-inline: 1.5rem;
 }
 
+.improve-bmi__intro {
+    display: flex;
+    flex-direction: column;
+}
+
 .bmi-interpretation {
     margin-top: 3rem;
 }
@@ -29,5 +34,25 @@
 
     & p {
         margin-top: 0.66666667rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .improve-bmi__intro {
+        --offset: 5rem;
+        flex-direction: row;
+    }
+
+    .improve-bmi__intro > * {
+        flex: 1 1 50%;
+    }
+
+    .improve-bmi__intro:first-child {
+        transform: translateX(calc(-1 * var(--offset)));
+    }
+
+    .bmi-interpretation > * {
+        transform: translateX(calc(var(--offset) + 1rem));
+        padding-right: 1rem;
     }
 }

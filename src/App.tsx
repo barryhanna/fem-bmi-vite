@@ -9,10 +9,12 @@ function App() {
     <>
       <Header />
       <section className="improve-bmi">
-        <img src="/assets/images/image-man-eating.webp" alt="A man smiling whilst eating sushi with chopsticks" />
-        <div className="bmi-interpretation">
-          <h2 className='bmi-interperatation__header'>What your BMI result means</h2>
-          <p className='bmi-interpretation___description'>A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your chances of experiencing health issues later on, such as obesity and type 2 diabetes. Aim for a nutritious diet with reduced fat and sugar content, incorporating ample fruits and vegetables. Additionally, strive for regular physical activity, ideally about 30 minutes daily for five days a week.</p>
+        <div className="improve-bmi__intro">
+          <div className="image-wrapper"><img src="/assets/images/image-man-eating.webp" alt="A man smiling whilst eating sushi with chopsticks" /></div>
+          <div className="bmi-interpretation">
+            <h2 className='bmi-interperatation__header'>What your BMI result means</h2>
+            <p className='bmi-interpretation___description'>A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your chances of experiencing health issues later on, such as obesity and type 2 diabetes. Aim for a nutritious diet with reduced fat and sugar content, incorporating ample fruits and vegetables. Additionally, strive for regular physical activity, ideally about 30 minutes daily for five days a week.</p>
+          </div>
         </div>
         <div className="improve-bmi__card-list">
           <ImproveBMICard icon="eating">
